@@ -1,0 +1,104 @@
+body {
+  font-family: sans-serif;
+  background-color: #f8bbd0; /* Light Pink */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #880e4f; /* Deep Pink Accent */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.heart {
+  margin: 25px auto;
+  width: 100px;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.message {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Flower Styles */
+.flowers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.flower {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg); /* Rotate the entire flower */
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #55be63; /* A slightly darker pink */
+  border-radius: 50%;
+}
+
+.petal:nth-child(1) { top: 0; left: 15px; }
+.petal:nth-child(2) { top: 15px; right: 0; }
+.petal:nth-child(3) { bottom: 0; left: 15px; }
+.petal:nth-child(4) { top: 15px; left: 0; }
+
+.core {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: #e91e63; /* A vibrant pink */
+  border-radius: 50%;
+  z-index: 1; /* Ensure the core is on top */
+}
+
+/* Individual Flower Positions */
+.flower-1 { animation: bloom 5s infinite alternate; }
+.flower-2 { animation: bloom 6s infinite alternate; animation-delay: 1s; }
+.flower-3 { animation: bloom 7s infinite alternate; animation-delay: 2s; }
+
+@keyframes bloom {
+  0% { transform: rotate(45deg) scale(1); }
+  100% { transform: rotate(45deg) scale(1.2); }
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
